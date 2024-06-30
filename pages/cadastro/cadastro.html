@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PC2D - Programa de Cadastro de Pessoas com Deficiência - Cadastro</title>
+  <link rel = "icon" type = "image/png" sizes = "32x32" href = "../../assets/favicon.png">
   <link href="cadastro.css" rel="stylesheet" type="text/css">
   <script type="text/javascript">
     function enviarCadastroPessoa() {
@@ -74,8 +74,8 @@
         },
         method: "POST",
         body: JSON.stringify({
-          description: nDescription.value,
-          disability: nDef.value,
+          description: nDef.value,
+          disability: nDescription.value,
           postalCode: nCep.value
         })
       }
@@ -168,14 +168,32 @@
     </div>
 </div>
 <div>
-<h1>Cadastro de necessidades especiais</h1>
+  <h1>Cadastro de Necessidades Especiais</h1>
+  <form method="POST" class="form-cadastro">
+      <div class="linha">
+          <label for="TipoAdequacao">Nome da Necessidade Especial:</label>
+          <input type="text" id="TipoAdequacao" name="Adequacao" required>
+      </div>
+      <div class="linha">
+          <label for="Deficiencia">Tipo de necessidade com CID:</label>
+          <input type="text" id="DeficienciaAdequacao" name="Deficiencia" required>
+      </div>
+      <div class="linha">
+          <label for="Endereço">Endereço:</label>
+          <input type="text" id="EndereçoAdequacao" name="Endereço" required>
+      </div>
+      <input type='submit' value="Cadastrar" onclick="enviarCadastroAdequacao()">
+  </form>
+</div>
+<div>
+<h1>Requerimento de adequação</h1>
     <form method="POST" class="form-cadastro">
         <div class="linha">
-            <label for="Necessidade">Necessidade:</label>
+            <label for="Necessidade">Tipo de necessidade com CID:</label>
             <input type="text" id="Necessidade" name="Necessidade" required>
         </div>
         <div class="linha">
-            <label for="Deficiencia">Tipo de deficiência:</label>
+            <label for="Deficiencia">Descrição da adequação:</label>
             <input type="text" id="DeficienciaNecessidade" name="Deficiencia" required>
         </div>
         <div class="linha">
@@ -185,25 +203,6 @@
         <input type='submit' value="Cadastrar" onclick="enviarCadastroNecessidade()">
     </form>
 </div>
- <div>
-    <h1>Cadastro de adequações</h1>
-    <form method="POST" class="form-cadastro">
-        <div class="linha">
-            <label for="TipoAdequacao">Tipo de Adequação:</label>
-            <input type="text" id="TipoAdequacao" name="Adequacao" required>
-        </div>
-        <div class="linha">
-            <label for="Deficiencia">Tipo de deficiência:</label>
-            <input type="text" id="DeficienciaAdequacao" name="Deficiencia" required>
-        </div>
-        <div class="linha">
-            <label for="Endereço">Endereço:</label>
-            <input type="text" id="EndereçoAdequacao" name="Endereço" required>
-        </div>
-        <input type='submit' value="Cadastrar" onclick="enviarCadastroAdequacao()">
-    </form>
- </div>
- <input type='submit' value="Testar" onclick="teste()">
 </main>
   <footer>
     <div class="contato">
