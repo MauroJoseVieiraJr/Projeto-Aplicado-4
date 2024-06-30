@@ -24,7 +24,7 @@
         pCel.value !== "" &&
         pEmail.value !== "" &&
         pCep.value !== "" ) {      
-          fetch("https://3.131.99.67:8080/ProjetoAplicado3/person/",
+          fetch("http://3.131.99.67:8080/ProjetoAplicado3/person/",
           {
             headers: {
               "Accept": "application/json",
@@ -66,7 +66,7 @@
     if (nDescription.value !== "" &&
         nDef.value !== "" &&
         nCep.value !== "" ) {  
-      fetch("https://3.131.99.67:8080/ProjetoAplicado3/necessity/",
+      fetch("http://3.131.99.67:8080/ProjetoAplicado3/necessity/",
       {
         headers: {
           "Accept": "application/json",
@@ -102,7 +102,7 @@
         aType.value !== "" &&
         aCep.value !== "" ) {
         }
-        fetch("https://3.131.99.67:8080/ProjetoAplicado3/adequacy/",
+        fetch("http://3.131.99.67:8080/ProjetoAplicado3/adequacy/",
         {
           headers: {
             "Accept": "application/json",
@@ -203,6 +203,7 @@
         <input type='submit' value="Cadastrar" onclick="enviarCadastroAdequacao()">
     </form>
  </div>
+ <input type='submit' value="Testar" onclick="teste()">
 </main>
   <footer>
     <div class="contato">
